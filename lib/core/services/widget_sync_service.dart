@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:home_widget/home_widget.dart';
 
 class WidgetSyncService {
@@ -9,7 +10,9 @@ class WidgetSyncService {
 
   Future<void> init() async {
     try {
-      await HomeWidget.setAppGroupId(appGroupId);
+      if (Platform.isIOS) {
+        await HomeWidget.setAppGroupId(appGroupId);
+      }
     } catch (_) {}
   }
 
@@ -46,4 +49,3 @@ class WidgetSyncService {
     } catch (_) {}
   }
 }
-

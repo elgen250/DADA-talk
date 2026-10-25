@@ -1,4 +1,4 @@
-package com.vava.vava_translator
+package com.vava.translator
 
 import io.flutter.embedding.android.FlutterActivity
 
