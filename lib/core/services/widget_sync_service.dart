@@ -46,3 +46,4 @@ class WidgetSyncService {
     } catch (_) {}
   }
 }
+

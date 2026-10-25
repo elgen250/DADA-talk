@@ -207,3 +207,4 @@ AppLanguage getAppLanguageByCode(String code) {
     orElse: () => kSupportedLanguages[1], // default English
   );
 }
+

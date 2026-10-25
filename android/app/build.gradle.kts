@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId = "com.vava.translator"
-        minSdk = 23
+        minSdk = flutter.minSdkVersion.coerceAtLeast(23)
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

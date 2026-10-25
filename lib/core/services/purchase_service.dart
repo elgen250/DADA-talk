@@ -81,3 +81,4 @@ class PurchaseNotifier extends StateNotifier<PurchaseState> {
 final purchaseProvider = StateNotifierProvider<PurchaseNotifier, PurchaseState>((ref) {
   return PurchaseNotifier();
 });
+
