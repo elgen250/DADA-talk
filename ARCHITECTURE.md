@@ -1,11 +1,11 @@
-# VAVA Translator — Flutter & Native iOS Architectural Blueprint
+# DADA Flutter — Flutter & Native iOS Architectural Blueprint
 
 ## 1. الهوية والمواصفات الأساسية (Project Identity)
-- **App Name:** VAVA Translator
-- **Bundle Identifier:** `com.vava.translator`
-- **Keyboard Extension Bundle ID:** `com.vava.translator.keyboard`
-- **Widget Extension Bundle ID:** `com.vava.translator.widget`
-- **Shared App Group:** `group.com.vava.translator`
+- **App Name:** DADA Flutter
+- **Bundle Identifier:** `com.DADA.translator`
+- **Keyboard Extension Bundle ID:** `com.DADA.translator.keyboard`
+- **Widget Extension Bundle ID:** `com.DADA.translator.widget`
+- **Shared App Group:** `group.com.DADA.translator`
 - **Target OS:** iOS 18.0+ (Primary) / Android Compatible
 - **Framework:** Flutter (3.24+ / Dart 3.5+) + Native iOS Swift Bridges (`FlutterMethodChannel`)
 - **State Management:** `flutter_riverpod`
@@ -16,7 +16,7 @@
 ## 2. مبدأ العمل الأساسي: 100% معالجة محلية (Zero-Cost On-Device Engine)
 لا يعتمد التطبيق على أي خوادم ترجمة خارجية مدفوعة. تتم جميع العمليات محلياً:
 1. **محرك الترجمة النصية (On-Device Translation):**
-   - **الخيار الأول (Native iOS Bridge):** عبر `MethodChannel('com.vava.translator/engine')` يستدعي إطار `Translation.framework` الأصيل في iOS 18.
+   - **الخيار الأول (Native iOS Bridge):** عبر `MethodChannel('com.DADA.translator/engine')` يستدعي إطار `Translation.framework` الأصيل في iOS 18.
    - **الخيار المدمج (Cross-Platform On-Device):** استخدام `google_mlkit_translation` و `google_mlkit_language_id` للترجمة العصبية المحلية وتنزيل حزم اللغات للعمل بدون إنترنت 100%.
 2. **التعرف الصوتي (STT):** حزمة `speech_to_text` مربوطة بـ `SFSpeechRecognizer` المحلي (`onDevice: true`).
 3. **النطق الصوتي (TTS):** حزمة `flutter_tts` مربوطة بـ `AVSpeechSynthesizer` وأصوات النظام.
@@ -31,7 +31,7 @@
 
 ## 4. هيكل مجلدات المشروع (Clean Architecture Directory Tree)
 ```text
-vava_translator/
+DADA_translator/
 ├── ARCHITECTURE.md
 ├── pubspec.yaml
 ├── .github/workflows/build-ipa.yml
@@ -53,7 +53,7 @@ vava_translator/
 │   │   └── lesson_progress.dart           # id, scenarioTitle, completedSteps, totalSteps, score
 │   └── features/
 │       ├── onboarding/     # 4 Screens: Globe, Camera, Offline, Coach James
-│       ├── paywall/        # Unlock VAVA Pro ($39.99/yr Best Value, $4.99/wk Most Popular, 3-day trial, Restore)
+│       ├── paywall/        # Unlock DADA Pro ($39.99/yr Best Value, $4.99/wk Most Popular, 3-day trial, Restore)
 │       ├── home_shell/     # Bottom Navigation Bar Shell
 │       ├── text_translate/ # Text input, auto-detect, swap, TTS, copy, favorite
 │       ├── live_talk/      # Split-screen dual microphone conversation, live bubbles & auto-TTS
@@ -62,16 +62,16 @@ vava_translator/
 │       ├── history/        # 3-Way Segmented Control (Text / Talk / Lesson) + Favorites filter + Swipe to delete
 │       └── settings/       # Offline Language Packs manager (Download/Installed status), Keyboard setup guide, Widget settings, Theme/RTL toggle
 └── ios/
-    ├── Runner/             # Info.plist (Mic, Speech, Camera permissions), Runner.entitlements (group.com.vava.translator)
-    ├── VAVAWidget/         # Native SwiftUI WidgetKit Extension (reads shared SQLite/UserDefaults via home_widget)
-    └── VAVAKeyboard/       # Native UIInputViewController Keyboard Extension
+    ├── Runner/             # Info.plist (Mic, Speech, Camera permissions), Runner.entitlements (group.com.DADA.translator)
+    ├── DADAWidget/         # Native SwiftUI WidgetKit Extension (reads shared SQLite/UserDefaults via home_widget)
+    └── DADAKeyboard/       # Native UIInputViewController Keyboard Extension
 ```
 
 ---
 
 ## 5. خريطة الشاشات والوظائف التفصيلية (Screens & Features Spec)
 - **Onboarding Flow:** 4 صفحات تعريفية متسلسلة (دعم اللغات، ترجمة الكاميرا، العمل دون إنترنت، المدرب التفاعلي James) مع زر تخطي.
-- **Paywall (Unlock VAVA Pro):** عرض الباقة السنوية ($39.99/year - $0.77/week BEST VALUE) والأسبوعية ($4.99/week MOST POPULAR) مع تجربة مجانية 3 أيام وحفظ حالة `isProUser` في الحاوية المشتركة `group.com.vava.translator`.
+- **Paywall (Unlock DADA Pro):** عرض الباقة السنوية ($39.99/year - $0.77/week BEST VALUE) والأسبوعية ($4.99/week MOST POPULAR) مع تجربة مجانية 3 أيام وحفظ حالة `isProUser` في الحاوية المشتركة `group.com.DADA.translator`.
 - **Text Tab:** إدخال نصي ديناميكي، كشف تلقائي للغة، تبديل اللغات (Swap)، استماع صوتي (TTS)، نسخ، إضافة للمفضلة، وحفظ تلقائي في السجل.
 - **Talk Tab (Live Split-Screen):** شاشة منقسمة لمتحدثين (أو وجهاً لوجه)، زر ميكروفون لكل طرف، تفريغ صوتي فوري في فقاعات دردشة، ترجمة ونطق تلقائي.
 - **Camera Tab (Live OCR):** معاينة الكاميرا مع إرشاد ("Hold steady")، التقاط صورة أو استيراد من المعرض، استخراج النصوص ورسم صناديق الترجمة فوق أماكنها الأصلية.
@@ -79,12 +79,12 @@ vava_translator/
   - مكتبة عبارات مصنفة: يومية (`Casual`)، سفر (`Travel`)، أكاديمية (`Academic`).
   - المدرب التفاعلي ("Hi, I'm James!"): محادثات سيناريو مسبقة الإعداد لتدريب المستخدم على النطق والترجمة محلياً وحفظ التقدم في `LessonProgress`.
 - **History Tab:** مقسم ثلاثي (`Text` | `Talk` | `Lessons`) + فلتر المفضلة (`Favorites`) + حذف بالسحب أو مسح الكل (`Clear all`).
-- **Settings Modal:** إدارة تنزيل حزم اللغات الـ 19 للعمل بدون إنترنت، شرح خطوات تفعيل لوحة المفاتيح (`VAVAKeyboard`)، إعدادات الويدجت، وتغيير اللغة/المظهر.
+- **Settings Modal:** إدارة تنزيل حزم اللغات الـ 19 للعمل بدون إنترنت، شرح خطوات تفعيل لوحة المفاتيح (`DADAKeyboard`)، إعدادات الويدجت، وتغيير اللغة/المظهر.
 
 ---
 
-## 6. التكامل مع ملحقات iOS (App Extensions via group.com.vava.translator)
-- استخدام حزمة `home_widget` لمزامنة العبارات اليومية وحالة الاشتراك بين Flutter وملحق `VAVAWidget` و `VAVAKeyboard` عبر `UserDefaults(suiteName: "group.com.vava.translator")`.
+## 6. التكامل مع ملحقات iOS (App Extensions via group.com.DADA.translator)
+- استخدام حزمة `home_widget` لمزامنة العبارات اليومية وحالة الاشتراك بين Flutter وملحق `DADAWidget` و `DADAKeyboard` عبر `UserDefaults(suiteName: "group.com.DADA.translator")`.
 - ضبط جميع الأذونات في `ios/Runner/Info.plist`:
   - `NSMicrophoneUsageDescription`
   - `NSSpeechRecognitionUsageDescription`

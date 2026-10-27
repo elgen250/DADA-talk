@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.vava.translator"
+    namespace = "com.dada.translator"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.vava.translator"
+        applicationId = "com.dada.translator"
         minSdk = flutter.minSdkVersion.coerceAtLeast(23)
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

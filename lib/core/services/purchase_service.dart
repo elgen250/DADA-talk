@@ -31,8 +31,8 @@ class PurchaseNotifier extends StateNotifier<PurchaseState> {
     _loadProStatus();
   }
 
-  static const String _proKey = 'vava_is_pro_user';
-  static const String _planKey = 'vava_active_plan';
+  static const String _proKey = 'dada_is_pro_user';
+  static const String _planKey = 'dada_active_plan';
 
   Future<void> _loadProStatus() async {
     try {

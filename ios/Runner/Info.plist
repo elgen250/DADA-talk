@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>VAVA Translator</string>
+	<string>DADA Flutter</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -15,7 +15,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>vava_translator</string>
+	<string>dada_flutter</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -27,13 +27,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>VAVA Translator needs microphone access for live speech translation and pronunciation coaching.</string>
+	<string>DADA Flutter needs microphone access for live speech translation and pronunciation coaching.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>VAVA Translator needs speech recognition access to transcribe spoken conversations locally on your device.</string>
+	<string>DADA Flutter needs speech recognition access to transcribe spoken conversations locally on your device.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>VAVA Translator needs camera access to capture and translate text directly from images and real-world signs.</string>
+	<string>DADA Flutter needs camera access to capture and translate text directly from images and real-world signs.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>VAVA Translator needs photo library access to select photos for OCR translation.</string>
+	<string>DADA Flutter needs photo library access to select photos for OCR translation.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

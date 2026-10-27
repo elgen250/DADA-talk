@@ -48,21 +48,21 @@ jobs:
         run: |
           mkdir -p Payload
           cp -r build/ios/iphoneos/Runner.app Payload/
-          zip -r -y VAVATranslator-Flutter-Release.ipa Payload
-          ls -lh VAVATranslator-Flutter-Release.ipa
+          zip -r -y DadaFlutter-Release.ipa Payload
+          ls -lh DadaFlutter-Release.ipa
 
       - name: Upload IPA Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: VAVATranslator-Flutter-Release-IPA
-          path: VAVATranslator-Flutter-Release.ipa
+          name: DadaFlutter-Release-IPA
+          path: DadaFlutter-Release.ipa
           retention-days: 14
 
       - name: Create GitHub Release on Tag
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: VAVATranslator-Flutter-Release.ipa
+          files: DadaFlutter-Release.ipa
           generate_release_notes: true
           draft: false
           prerelease: false

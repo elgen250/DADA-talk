@@ -115,8 +115,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                       children: [
                         Text(
                           purchase.isPro
-                              ? 'VAVA Pro مفعل (مدى الحياة/سنوي)'
-                              : 'ترقية إلى VAVA Pro',
+                              ? 'DADA Pro مفعل (مدى الحياة/سنوي)'
+                              : 'ترقية إلى DADA Pro',
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 16,
@@ -244,7 +244,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 children: [
                   ListTile(
                     leading: const Icon(Icons.keyboard_rounded),
-                    title: const Text('لوحة مفاتيح الترجمة (VAVAKeyboard)'),
+                    title: const Text('لوحة مفاتيح الترجمة (DADAKeyboard)'),
                     subtitle: const Text('خطوات التفعيل في إعدادات iOS'),
                     trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
                     onTap: _showKeyboardGuide,
@@ -256,7 +256,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                   ListTile(
                     leading: const Icon(Icons.widgets_rounded),
                     title: const Text('مزامنة ويدجت الشاشة (WidgetKit)'),
-                    subtitle: const Text('App Group: group.com.vava.translator'),
+                    subtitle: const Text('App Group: group.com.dada.translator'),
                     trailing: const Icon(Icons.check_circle_rounded,
                         color: AppTheme.accentColor, size: 20),
                   ),
@@ -377,8 +377,8 @@ class _KeyboardGuideSheet extends StatelessWidget {
       'افتح إعدادات الآيفون (Settings).',
       'انتقل إلى: عام (General) > لوحة المفاتيح (Keyboard).',
       'اضغط على: لوحات المفاتيح (Keyboards) > إضافة لوحة مفاتيح جديدة...',
-      'اختر "VAVA Translator" من قائمة لوحات المفاتيح الخارجية.',
-      'اضغط على VAVA Translator وقم بتفعيل "السماح بالوصول الكامل" (Allow Full Access).',
+      'اختر "DADA Flutter" من قائمة لوحات المفاتيح الخارجية.',
+      'اضغط على DADA Flutter وقم بتفعيل "السماح بالوصول الكامل" (Allow Full Access).',
       'الآن في أي تطبيق دردشة أو ملاحظات، اضغط مطولاً على أيقونة الكرة الأرضية 🌐 للترجمة الفورية!',
     ];
 
@@ -407,7 +407,7 @@ class _KeyboardGuideSheet extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text(
-                'تفعيل لوحة مفاتيح VAVA',
+                'تفعيل لوحة مفاتيح DADA',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
               ),
               IconButton(

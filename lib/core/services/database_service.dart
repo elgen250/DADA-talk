@@ -18,7 +18,7 @@ class DatabaseService {
 
   Future<Database> _initDatabase() async {
     final dbPath = await getDatabasesPath();
-    final path = p.join(dbPath, 'vava_translator.db');
+    final path = p.join(dbPath, 'dada_translator.db');
 
     return await openDatabase(
       path,

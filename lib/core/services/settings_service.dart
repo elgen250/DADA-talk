@@ -36,10 +36,10 @@ class SettingsNotifier extends StateNotifier<SettingsState> {
     _loadSettings();
   }
 
-  static const String _themeKey = 'vava_theme_mode';
-  static const String _langKey = 'vava_app_lang';
-  static const String _autoTtsKey = 'vava_auto_tts';
-  static const String _onboardingKey = 'vava_has_onboarded';
+  static const String _themeKey = 'dada_theme_mode';
+  static const String _langKey = 'dada_app_lang';
+  static const String _autoTtsKey = 'dada_auto_tts';
+  static const String _onboardingKey = 'dada_has_onboarded';
 
   Future<void> _loadSettings() async {
     try {

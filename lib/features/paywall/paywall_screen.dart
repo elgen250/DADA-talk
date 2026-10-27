@@ -33,7 +33,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
     if (mounted && success) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('🎉 تم تفعيل اشتراك VAVA Pro بنجاح! استمتع بكل المزايا.'),
+          content: Text('🎉 تم تفعيل اشتراك DADA Pro بنجاح! استمتع بكل المزايا.'),
           backgroundColor: AppTheme.accentColor,
         ),
       );
@@ -49,7 +49,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(restored
-              ? '✅ تم استعادة اشتراك VAVA Pro بنجاح.'
+              ? '✅ تم استعادة اشتراك DADA Pro بنجاح.'
               : 'ℹ️ لم يتم العثور على اشتراكات سابقة نشطة.'),
           backgroundColor:
               restored ? AppTheme.accentColor : Colors.grey.shade800,
@@ -104,7 +104,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
 
                   // Header
                   const Text(
-                    'Unlock VAVA Pro',
+                    'Unlock DADA Pro',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.w900,
@@ -150,7 +150,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                   _buildFeatureRow(
                     icon: Icons.widgets_rounded,
                     title: 'ويدجت الشاشة الرئيسية ولوحة مفاتيح iOS',
-                    subtitle: 'VAVA WidgetKit & Keyboard Extension Sync',
+                    subtitle: 'DADA WidgetKit & Keyboard Extension Sync',
                     isDark: isDark,
                   ),
                   const SizedBox(height: 28),
@@ -210,7 +210,7 @@ class _PaywallScreenState extends ConsumerState<PaywallScreen> {
                         : Text(
                             _selectedPlan == 'yearly'
                                 ? 'ابدأ تجربتك المجانية 3 أيام الآن'
-                                : 'تفعيل اشتراك VAVA Pro',
+                                : 'تفعيل اشتراك DADA Pro',
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w700,

@@ -94,7 +94,7 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        'VAVA',
+                        'DADA',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w800,

@@ -15,20 +15,20 @@ void main() async {
 
   runApp(
     const ProviderScope(
-      child: VavaTranslatorApp(),
+      child: DadaTranslatorApp(),
     ),
   );
 }
 
-class VavaTranslatorApp extends ConsumerWidget {
-  const VavaTranslatorApp({super.key});
+class DadaTranslatorApp extends ConsumerWidget {
+  const DadaTranslatorApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsProvider);
 
     return MaterialApp(
-      title: 'VAVA Translator',
+      title: 'DADA Flutter',
       debugShowCheckedModeBanner: false,
       themeMode: settings.themeMode,
       theme: AppTheme.light(),

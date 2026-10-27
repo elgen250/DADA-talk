@@ -5,8 +5,8 @@ class WidgetSyncService {
   static final WidgetSyncService instance = WidgetSyncService._internal();
   WidgetSyncService._internal();
 
-  static const String appGroupId = 'group.com.vava.translator';
-  static const String widgetName = 'VAVAWidget';
+  static const String appGroupId = 'group.com.dada.translator';
+  static const String widgetName = 'DADAWidget';
 
   Future<void> init() async {
     try {
