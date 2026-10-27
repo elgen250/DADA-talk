@@ -12,6 +12,7 @@
 .swiftpm/
 migrate_working_dir/
 *.ipa
+*.apk
 Payload/
 
 # IntelliJ related
